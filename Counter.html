@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+
+    <title>My Counter</title>
+  </head>
+  <body>
+
+
+<script>
+
+let name = prompt ("Sono a casa di? ... ", "");
+
+document.write("<h1>Ciao " + name + "! Quanti gradi vuoi impostare?</h1>");
+
+let i = document.getElementById("result");
+
+let value = 0;
+
+function selezionaPiu(){
+    value++;
+    console.log(value);
+    document.getElementById("result").innerHTML++;
+    }
+
+function selezionaMeno(){
+    value--;
+    console.log(value);
+    document.getElementById("result").innerHTML--;
+    }
+
+function confirm () {
+  if (value < 0) {
+    document.getElementById('riquadro').style.backgroundImage = "url('./Immagini/neve.gif')";
+    alert(`Hai caldo? Hai impostato ${value} °C gradi!`)
+   } else if (value > 15 ) {
+    alert(`Hai freddo? Hai impostato ${value} °C gradi!`)
+    document.getElementById('riquadro').style.backgroundImage = "url('./Immagini/fuoco.gif')";
+    }
+    else {
+      alert("Se non devo scaldare nè raffreddare, rimango in attesa!");
+      document.getElementById('riquadro').style.backgroundImage = "url('./Immagini/sleep.gif')";}
+  }
+  
+
+</script>
+
+  <div class="container main_box">
+      <button class="btn counter" id="destra" onClick="selezionaMeno()">-</button>
+      <label id="result"> 0 </label>
+       <div class="gradi"> °C </div>
+      <button class="btn counter" onClick="selezionaPiu()" id="selectbutton">+</button>
+       <div id="conferma"> 
+        <button type="button" class="btn btn-light border-dark" onclick="confirm()">Conferma!</button>
+      </div>
+  </div>
+
+  <div id="riquadro"> </div>
+  
+</body>
+</html>
