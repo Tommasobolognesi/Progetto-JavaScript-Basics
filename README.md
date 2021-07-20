@@ -11,5 +11,6 @@ Questo è uno screen della pagina che presenta il counter, per avere un'idea.
 ![image](https://user-images.githubusercontent.com/85452939/126344605-ef719e62-2a97-455b-b484-f1c1cde7bd54.png)
 
 LINK
+https://tommasobolognesi.github.io/Progetto-JavaScript-Basics/
 
 Attraveros questo link è possibile accedere alla pagina desiderata.
